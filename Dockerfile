@@ -2,8 +2,9 @@ FROM mysql/mysql-server
 
 ENV MYSQL_DATABASE=DB \
     MYSQL_ROOT_PASSWORD=password \
-    MYSQL_ROOT_HOST=%
+    MYSQL_ROOT_HOST=localhost
 
 ADD schema.sql /docker-entrypoint-initdb.d
 
-EXPOSE 3306
+EXPOSE 3308
+    

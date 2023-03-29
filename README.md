@@ -9,5 +9,5 @@ docker build -t local-mysql .
 ```
 - Run container
 ``` batch
-docker run -dp 3306:3306 local-mysql
+docker run -dp 3308:3308 local-mysql
 ```
