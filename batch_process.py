@@ -7,7 +7,8 @@ import mysql.connector
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="password"
+  password="password",
+  port = 3308
 )
 
 cur = mydb.cursor()
@@ -26,7 +27,7 @@ for record in records:
     order_time = record['order_time']
     date_obj = datetime.strptime(order_time, '%Y-%m-%d %H:%M:%S.%f')
     item = record['item']
-    sql_stmt = f"INSERT INTO Orders(OrderTime, Item) VALUES('{date_obj}', '{item}')"
+    sql_stmt = f"INSERT INTO Orders(OrderTime, Item) VALUES('{date_obj}', {item})"
     cur.execute(sql_stmt)
     mydb.commit()
 

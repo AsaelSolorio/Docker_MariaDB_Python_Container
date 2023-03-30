@@ -1,10 +1,10 @@
-FROM mysql/mysql-server
+FROM mariadb:latest
 
-ENV MYSQL_DATABASE=DB \
-    MYSQL_ROOT_PASSWORD=password \
-    MYSQL_ROOT_HOST=localhost
+ENV MARIADB_DATABASE=DB \
+    MARIADB_ROOT_PASSWORD=password \
+    MARIADB_ROOT_HOST=localhost
 
 ADD schema.sql /docker-entrypoint-initdb.d
 
-EXPOSE 3308
+EXPOSE 3306
     

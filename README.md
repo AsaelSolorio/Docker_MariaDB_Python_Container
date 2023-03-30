@@ -5,7 +5,7 @@ MySql Docker Demonstration Example
 - Start Docker Desktop
 - Build image
 ``` batch
-docker build -t local-mysql .
+docker build -t mariadb:1 .
 ```
 - Run container
 ``` batch
