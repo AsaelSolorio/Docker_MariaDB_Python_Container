@@ -1,13 +1,13 @@
-# mysql-docker-example
-MySql Docker Demonstration Example
+# mariaDB-docker-example
+MariaDB Docker Demonstration Example
 
 ## Build Docker image
 - Start Docker Desktop
-- Build image
+- Build image container
 ``` batch
-docker build -t mariadb:1 .
+docker compose up .
 ```
 - Run container
 ``` batch
-docker run -dp 3308:3308 local-mysql
+run batch_process.py
 ```
